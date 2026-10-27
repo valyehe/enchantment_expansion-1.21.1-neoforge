@@ -31,7 +31,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
  *     <li>注册 COMMON 类型配置文件；</li>
  *     <li>在客户端注册游戏内配置界面。</li>
  * </ul>
- * 各附魔的具体效果逻辑位于 {@code event} 与 {@code client} 包的事件处理器中。
+ * 各附魔的具体效果逻辑位于 {@code event} 包的事件处理器中，
+ * 熔岩视野的光影兼容补丁位于 {@code mixin} 包的 {@code CameraMixin} 中。
  */
 @Mod(EnchantmentExpansion.MOD_ID)
 public final class EnchantmentExpansion {

@@ -11,10 +11,5 @@
   "enchantment_expansion.configuration.title": "Enchantment Expansion Configuration",
   "config.enchantment_expansion.life_steal": "Life Steal",
   "config.enchantment_expansion.life_steal.heal_percent_per_level": "Heal Percent per Level",
-  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "The fraction of actually dealt damage restored as health per level. 0.10 means 10%, 0.30 means 30%.",
-  "config.enchantment_expansion.lava_vision": "Lava Vision",
-  "config.enchantment_expansion.lava_vision.fog_near": "Fog Near Distance",
-  "config.enchantment_expansion.lava_vision.fog_near.tooltip": "The start distance of the lava fog while wearing the Lava Vision helmet (smaller is clearer).",
-  "config.enchantment_expansion.lava_vision.fog_far": "Fog Far Distance",
-  "config.enchantment_expansion.lava_vision.fog_far.tooltip": "The far distance of the lava fog while wearing the Lava Vision helmet (larger lets you see farther)."
+  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "The fraction of actually dealt damage restored as health per level. 0.10 means 10%, 0.30 means 30%."
 }

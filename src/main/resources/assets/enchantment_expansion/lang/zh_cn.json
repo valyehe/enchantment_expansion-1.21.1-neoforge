@@ -11,10 +11,5 @@
   "enchantment_expansion.configuration.title": "附魔拓展配置",
   "config.enchantment_expansion.life_steal": "生命偷取",
   "config.enchantment_expansion.life_steal.heal_percent_per_level": "每级恢复比例",
-  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。",
-  "config.enchantment_expansion.lava_vision": "熔岩视野",
-  "config.enchantment_expansion.lava_vision.fog_near": "雾起始距离",
-  "config.enchantment_expansion.lava_vision.fog_near.tooltip": "佩戴熔岩视野头盔时，熔岩雾的起始距离（越小越清晰）。",
-  "config.enchantment_expansion.lava_vision.fog_far": "雾最远距离",
-  "config.enchantment_expansion.lava_vision.fog_far.tooltip": "佩戴熔岩视野头盔时，熔岩雾的最远距离（越大看得越远）。"
+  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。"
 }

@@ -49,9 +49,9 @@ description='''
 Adds new vanilla-style enchantments to the game, including Night Vision, Smelting, Lava Vision and Life Steal.
 '''
 
-# The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
-#[[mixins]]
-#config="${mod_id}.mixins.json"
+# 声明 Mixin 配置，让 FML 在客户端加载熔岩视野的光影兼容补丁。
+[[mixins]]
+config="${mod_id}.mixins.json"
 
 # The [[accessTransformers]] block allows you to declare where your AT file is.
 # If this block is omitted, a fallback attempt will be made to load an AT from META-INF/accesstransformer.cfg

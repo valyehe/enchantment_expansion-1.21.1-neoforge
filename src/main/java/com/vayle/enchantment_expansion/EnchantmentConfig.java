@@ -26,13 +26,6 @@ public final class EnchantmentConfig {
     /** 每级附魔恢复“实际造成伤害”的比例（例如 0.10 表示 10%）。 */
     public final ModConfigSpec.DoubleValue lifeStealHealPercentPerLevel;
 
-    // ===== 熔岩视野（Lava Vision） =====
-
-    /** 熔岩雾的起始距离（越小越清晰）。 */
-    public final ModConfigSpec.DoubleValue lavaVisionFogNear;
-    /** 熔岩雾的最远距离（越大看得越远）。 */
-    public final ModConfigSpec.DoubleValue lavaVisionFogFar;
-
     private EnchantmentConfig(ModConfigSpec.Builder builder) {
         // 生命偷取分组：分组标题用 translation 在 push 前设置，push 时会写入分组级翻译键。
         builder.translation("config.enchantment_expansion.life_steal").push("life_steal");
@@ -40,18 +33,6 @@ public final class EnchantmentConfig {
                 .comment("每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。")
                 .translation("config.enchantment_expansion.life_steal.heal_percent_per_level")
                 .defineInRange("heal_percent_per_level", 0.10D, 0.0D, 1.0D);
-        builder.pop();
-
-        // 熔岩视野分组。
-        builder.translation("config.enchantment_expansion.lava_vision").push("lava_vision");
-        lavaVisionFogNear = builder
-                .comment("佩戴熔岩视野头盔时，熔岩雾的起始距离（越小越清晰）。")
-                .translation("config.enchantment_expansion.lava_vision.fog_near")
-                .defineInRange("fog_near", 0.0D, 0.0D, 256.0D);
-        lavaVisionFogFar = builder
-                .comment("佩戴熔岩视野头盔时，熔岩雾的最远距离（越大看得越远）。")
-                .translation("config.enchantment_expansion.lava_vision.fog_far")
-                .defineInRange("fog_far", 96.0D, 1.0D, 512.0D);
         builder.pop();
     }
 }
