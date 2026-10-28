@@ -1,0 +1,54 @@
+# 自动发布：推送 v* 标签时构建模组并创建带 JAR 附件的 GitHub Release。
+#
+# 用法：本地打标签并推送即可，例如
+#   git tag v1.0.1
+#   git push origin v1.0.1
+# 版本号取自标签名（去掉开头的 v），并覆盖 gradle.properties 中的 mod_version。
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 允许创建 Release 并上传附件
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      # 从 tag 名提取版本号（去掉开头的 v），例如 v1.0.1 -> 1.0.1。
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      # 用 -P 覆盖 mod_version，使产出的 JAR 与 Release 版本一致。
+      - name: Build with Gradle
+        run: ./gradlew build -Pmod_version=${{ steps.version.outputs.version }}
+
+      # 创建 Release（如已存在同名则跳过）并上传构建出的 JAR。
+      - name: Create release and upload artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: build/libs/*.jar

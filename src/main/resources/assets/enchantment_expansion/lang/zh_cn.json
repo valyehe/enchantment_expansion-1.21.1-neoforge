@@ -4,12 +4,20 @@
   "enchantment.enchantment_expansion.smelting": "熔炼",
   "enchantment.enchantment_expansion.lava_vision": "熔岩视野",
   "enchantment.enchantment_expansion.life_steal": "生命偷取",
+  "enchantment.enchantment_expansion.ore_vision": "矿物高亮",
   "enchantment.enchantment_expansion.night_vision.desc": "佩戴时获得持续的夜视效果",
   "enchantment.enchantment_expansion.smelting.desc": "挖掘时自动烧炼方块掉落物",
   "enchantment.enchantment_expansion.lava_vision.desc": "佩戴时在熔岩下也能看清周围",
   "enchantment.enchantment_expansion.life_steal.desc": "攻击时按造成的伤害恢复自身生命",
+  "enchantment.enchantment_expansion.ore_vision.desc": "探测并高亮周围的矿物",
   "enchantment_expansion.configuration.title": "附魔拓展配置",
+  "config.enchantment_expansion.night_vision": "夜视",
+  "config.enchantment_expansion.smelting": "熔炼",
+  "config.enchantment_expansion.lava_vision": "熔岩视野",
   "config.enchantment_expansion.life_steal": "生命偷取",
   "config.enchantment_expansion.life_steal.heal_percent_per_level": "每级恢复比例",
-  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。"
+  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。",
+  "config.enchantment_expansion.ore_vision": "矿物高亮",
+  "config.enchantment_expansion.ore_vision.radius": "探测半径（格）",
+  "config.enchantment_expansion.ore_vision.radius.tooltip": "以玩家为中心探测矿物的正方体边长，单位格。"
 }

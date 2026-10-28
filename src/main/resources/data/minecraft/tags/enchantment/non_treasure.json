@@ -3,6 +3,7 @@
     "enchantment_expansion:night_vision",
     "enchantment_expansion:smelting",
     "enchantment_expansion:lava_vision",
-    "enchantment_expansion:life_steal"
+    "enchantment_expansion:life_steal",
+    "enchantment_expansion:ore_vision"
   ]
 }

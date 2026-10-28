@@ -17,6 +17,7 @@ public final class ModEnchantments {
     public static final ResourceKey<Enchantment> SMELTING = create("smelting");
     public static final ResourceKey<Enchantment> LAVA_VISION = create("lava_vision");
     public static final ResourceKey<Enchantment> LIFE_STEAL = create("life_steal");
+    public static final ResourceKey<Enchantment> ORE_VISION = create("ore_vision");
 
     private ModEnchantments() {
     }

@@ -28,3 +28,11 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      # 上传构建产物（JAR），方便从 GitHub Actions 页面直接下载成品。
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: enchantment_expansion-build
+          path: build/libs/*.jar
+          if-no-files-found: error

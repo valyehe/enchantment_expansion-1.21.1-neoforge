@@ -26,13 +26,26 @@ public final class EnchantmentConfig {
     /** 每级附魔恢复“实际造成伤害”的比例（例如 0.10 表示 10%）。 */
     public final ModConfigSpec.DoubleValue lifeStealHealPercentPerLevel;
 
+    // ===== 矿物高亮（Ore Vision） =====
+
+    /** 矿物探测半径（格），以玩家为中心的正方体边长。 */
+    public final ModConfigSpec.IntValue oreVisionRadius;
+
     private EnchantmentConfig(ModConfigSpec.Builder builder) {
-        // 生命偷取分组：分组标题用 translation 在 push 前设置，push 时会写入分组级翻译键。
+        // ===== 生命偷取 =====
         builder.translation("config.enchantment_expansion.life_steal").push("life_steal");
         lifeStealHealPercentPerLevel = builder
                 .comment("每级生命偷取恢复“实际造成伤害”的比例，0.10 表示 10%，0.30 表示 30%。")
                 .translation("config.enchantment_expansion.life_steal.heal_percent_per_level")
                 .defineInRange("heal_percent_per_level", 0.10D, 0.0D, 1.0D);
+        builder.pop();
+
+        // ===== 矿物高亮 =====
+        builder.translation("config.enchantment_expansion.ore_vision").push("ore_vision");
+        oreVisionRadius = builder
+                .comment("矿物探测半径（格），以玩家为中心的正方体边长。")
+                .translation("config.enchantment_expansion.ore_vision.radius")
+                .defineInRange("radius", 8, 1, 64);
         builder.pop();
     }
 }

@@ -53,6 +53,7 @@ public final class EnchantmentExpansion {
                         addEnchantedBooks(parameters.holders(), output, ModEnchantments.SMELTING);
                         addEnchantedBooks(parameters.holders(), output, ModEnchantments.LAVA_VISION);
                         addEnchantedBooks(parameters.holders(), output, ModEnchantments.LIFE_STEAL);
+                        addEnchantedBooks(parameters.holders(), output, ModEnchantments.ORE_VISION);
                     })
                     .build());
 

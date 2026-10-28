@@ -4,12 +4,20 @@
   "enchantment.enchantment_expansion.smelting": "Smelting",
   "enchantment.enchantment_expansion.lava_vision": "Lava Vision",
   "enchantment.enchantment_expansion.life_steal": "Life Steal",
+  "enchantment.enchantment_expansion.ore_vision": "Ore Vision",
   "enchantment.enchantment_expansion.night_vision.desc": "Grants constant night vision while worn",
   "enchantment.enchantment_expansion.smelting.desc": "Automatically smelts block drops while mining",
   "enchantment.enchantment_expansion.lava_vision.desc": "Lets you see clearly while submerged in lava",
   "enchantment.enchantment_expansion.life_steal.desc": "Restores health based on damage dealt",
+  "enchantment.enchantment_expansion.ore_vision.desc": "Detects and highlights nearby ores",
   "enchantment_expansion.configuration.title": "Enchantment Expansion Configuration",
+  "config.enchantment_expansion.night_vision": "Night Vision",
+  "config.enchantment_expansion.smelting": "Smelting",
+  "config.enchantment_expansion.lava_vision": "Lava Vision",
   "config.enchantment_expansion.life_steal": "Life Steal",
   "config.enchantment_expansion.life_steal.heal_percent_per_level": "Heal Percent per Level",
-  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "The fraction of actually dealt damage restored as health per level. 0.10 means 10%, 0.30 means 30%."
+  "config.enchantment_expansion.life_steal.heal_percent_per_level.tooltip": "The fraction of actually dealt damage restored as health per level. 0.10 means 10%, 0.30 means 30%.",
+  "config.enchantment_expansion.ore_vision": "Ore Vision",
+  "config.enchantment_expansion.ore_vision.radius": "Detection Radius (blocks)",
+  "config.enchantment_expansion.ore_vision.radius.tooltip": "The side length of the cube, centered on the player, in which ores are detected."
 }
